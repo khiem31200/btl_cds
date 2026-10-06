@@ -1,0 +1,23 @@
+Hãy tạo ra 1 file word. Yêu cầu làm theo hướng dẫn không tự sáng tạo, không tự ý chỉnh sửa ngoài phạm vi yêu cầu
+(File source: File tài liệu cần clone, File template: File template cần làm theo)
+1. Nội dung y hệt source
+2. Các phần bố cục:
++ Font chữ và cỡ chữ y hệt source
++ Trang đầu copy y hệt template, chỉ sửa lại tiêu đề, thành viên không cần sửa tại giong y hệt
++ Phân mục lục làm giống format của template: Font chữ, cỡ chữ, bôi đậm nhạt, Format của mục lục, generate tự động dựa trên text level
++ Nội dung chia thành các mục y hệt theo format.
+	Chương I -> I.1 -> I.1.1 -> I.1.1.1
++ Mục đầu chương yêu cầu vui long add text level để phục vụ việc tạo mục lục tự động
++ Nôi dung bên trong vui lòng lùi vào 1 ô đối với đoạn văn
++ Các mục cần liệt kê sử dung bullet tương tự file template
++ Bảng màu sắc kết cầu, font chữ màu chữ ý hệt file template
+3. Chuyển vị trí nội dung
++ Tất cả để nguyên vị trí trừ phân công công việc chuyển lên trước chương mở đầu kèm theo phân công công việc cụ thể như sau
+Họ và tên| Mã số sinh viên | Phần phụ trách
+Nguyễn Thị Diễm Anh | 20252613M | Chương 1, 2, 7, 8, tài liệu tham khảo và bài trình bày
+Nguyễn Gia Khảm | 20252126M | Chương 3. Pháp luật Việt Nam, và cột Việt Nam trong bảng 6.1
+Nguyễn Hòa Khiêm | 20252031M | Chương 4. Pháp luật thế giới, bảng 6.1 và bảng 6.2
+Đàm Đức Mạnh | 20252127M | Chương 5. Bốn công trình, và bảng 6.3
+4. Cuối cùng tên của file "BC-BTL-CXHCNCDX-Nhom-13", định dạng docx
+
+Sau đó chuẩn bị file hand down để tôi và nhóm có thể thuyết trình nhanh báo cáo này trong 15 phút
