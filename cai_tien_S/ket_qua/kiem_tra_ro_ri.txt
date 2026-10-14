@@ -1,0 +1,35 @@
+==============================================================================
+K1. TY LE CO CPE: NHOM BI KHAI THAC SO VOI NHOM KHONG BI KHAI THAC
+==============================================================================
+  2023: bi khai thac 100.0% co CPE   khong bi khai thac 100.0%
+  2024: bi khai thac 100.0% co CPE   khong bi khai thac  81.1%
+  2025: bi khai thac 100.0% co CPE   khong bi khai thac  66.4%
+
+==============================================================================
+K2. S2 VOI NHA CUNG CAP LAY TU CNA (khong ro ri)
+==============================================================================
+  Kiem thu 2024: bac 0: 0/5809, bac 1: 4/1887, bac 2: 6/1682, bac 3: 3/1151, bac 4: 3/3538
+  Kiem thu 2025: bac 0: 5/22157, bac 1: 15/5908, bac 2: 9/6010, bac 3: 19/4082, bac 4: 12/10869
+
+  Gop 2024 va 2025, 116 lo hong bi khai thac
+  Cach xep             Va 1%         Va 5%        Va 10%        Va 25%   Va bang CSA
+  S0              20.0 ( 17%)    40.0 ( 34%)    48.7 ( 42%)    72.0 ( 62%)    72.0 ( 62%)
+  S2 (CPE)        21.9 ( 19%)    43.6 ( 38%)    59.1 ( 51%)    87.4 ( 75%)    87.5 ( 75%)
+  S2 (CNA)        21.4 ( 18%)    40.4 ( 35%)    49.1 ( 42%)    75.8 ( 65%)    77.0 ( 66%)
+
+  S2 (CNA) so voi S0, khoang tin cay 95% bootstrap:
+    Va 1%           +1.4 ca  [  -2.0,   +4.7]  chua ro
+    Va 5%           +0.4 ca  [  -8.4,  +10.1]  chua ro
+    Va 10%          +0.4 ca  [  -9.7,   +9.8]  chua ro
+    Va 25%          +3.8 ca  [  -4.0,  +12.0]  chua ro
+    Va bang CSA     +5.0 ca  [  -3.3,  +13.8]  chua ro
+
+  CNA co nhieu lo hong bi khai thac nhat trong 2024-2025:
+    cve@mitre.org                             19 / 11,074
+    disclosure@vulncheck.com                   9 / 732
+    secure@microsoft.com                       9 / 2,289
+    security-advisories@github.com             8 / 4,469
+    416baaa9-dc9f-4396-8d5f-8c081fb06d67       6 / 9,065
+    security@apache.org                        4 / 478
+    security@vmware.com                        4 / 152
+    3c1d8aa1-5a33-4ea4-8992-aadd6440af75       4 / 159

@@ -1,0 +1,8 @@
+S0 so voi S2 (CPE), CHI TREN LO HONG DA CO CPE (p_ncc hoc lai tren tap co CPE)
+  2024: 32,099 lo hong co CPE, 50 bi khai thac
+  2025: 30,079 lo hong co CPE, 66 bi khai thac
+  Va 1%        S0   20.0   S2   20.9   chenh  +0.9 [ -1.9,  +3.2]  chua ro
+  Va 5%        S0   36.0   S2   39.0   chenh  +3.0 [ -6.0, +12.0]  chua ro
+  Va 10%       S0   47.5   S2   50.0   chenh  +2.5 [ -7.0, +12.0]  chua ro
+  Va 25%       S0   70.0   S2   80.9   chenh +10.9 [ -0.6, +22.6]  chua ro
+  Va bang CSA  S0   72.0   S2   85.2   chenh +13.2 [ +1.6, +25.5]  CO Y NGHIA

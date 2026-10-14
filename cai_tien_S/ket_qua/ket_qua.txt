@@ -1,0 +1,90 @@
+==============================================================================
+THU THAP DU LIEU
+==============================================================================
+KEV phien ban 2026.10.13, cat ve 2026-10-08: 1,739 muc
+Exploit-DB: 32,530 ma khai thac co ma tham chieu, 25,091 CVE co PoC
+
+==============================================================================
+DU LIEU PHAN TICH (moi lo hong moi cong bo toi da 31 ngay tai ngay D)
+==============================================================================
+Nam      Lo hong  Bi khai thac  Co PoC tai D    Co CPE  NCC tung vao KEV
+2023      28,723            43           120    100.0%             39.8%
+2024      39,544            50            22     81.2%             37.9%
+2025      45,277            66            62     66.4%             31.4%
+
+==============================================================================
+THAM SO HOC TREN DU LIEU CU
+==============================================================================
+Kiem thu 2024: hoc tren 2023-01-31 den 2023-06-30 (14,067 lo hong, 16 bi khai thac)
+  p_poc = 0.0000  (co PoC: 79 lo hong, 0 bi khai thac)
+  p_ncc[nha cung cap da co      0 muc KEV] = 0.00058  (5/8,586)
+  p_ncc[nha cung cap da co    1-4 muc KEV] = 0.00285  (5/1,754)
+  p_ncc[nha cung cap da co   5-19 muc KEV] = 0.00000  (0/1,096)
+  p_ncc[nha cung cap da co  20-99 muc KEV] = 0.00235  (5/2,131)
+  p_ncc[nha cung cap da co   100+ muc KEV] = 0.00200  (1/500)
+Kiem thu 2025: hoc tren 2023-01-31 den 2024-06-30 (49,026 lo hong, 60 bi khai thac)
+  p_poc = 0.0071  (co PoC: 141 lo hong, 1 bi khai thac)
+  p_ncc[nha cung cap da co      0 muc KEV] = 0.00027  (8/29,862)
+  p_ncc[nha cung cap da co    1-4 muc KEV] = 0.00302  (15/4,972)
+  p_ncc[nha cung cap da co   5-19 muc KEV] = 0.00071  (4/5,651)
+  p_ncc[nha cung cap da co  20-99 muc KEV] = 0.00354  (25/7,066)
+  p_ncc[nha cung cap da co   100+ muc KEV] = 0.00542  (8/1,475)
+
+==============================================================================
+KET QUA: SO LO HONG BI KHAI THAC BAT DUOC KHI VA CUNG SO LUONG
+==============================================================================
+
+Nam 2024: 50 lo hong bi khai thac
+  Cach xep                              Va 1%                Va 5%               Va 10%               Va 25%  Va bang quy tac CSA
+  CVSS                           0.9 ( 1.8%)         9.7 (19.4%)        20.7 (41.4%)        27.0 (54.0%)        27.0 (54.0%)
+  EPSS                           7.0 (14.0%)         9.6 (19.2%)        11.0 (22.0%)        14.7 (29.4%)        14.8 (29.6%)
+  S0 goc                         7.0 (14.0%)        10.0 (20.0%)        13.7 (27.4%)        29.0 (58.0%)        29.0 (58.0%)
+  S1 + PoC                       7.0 (14.0%)        10.0 (20.0%)        13.7 (27.4%)        29.0 (58.0%)        29.0 (58.0%)
+  S2 + san pham                  8.9 (17.9%)        17.0 (34.0%)        21.4 (42.9%)        38.0 (76.0%)        38.1 (76.2%)
+  S3 + PoC + san pham            8.9 (17.9%)        17.0 (34.0%)        21.4 (42.9%)        38.0 (76.0%)        38.1 (76.2%)
+
+Nam 2025: 66 lo hong bi khai thac
+  Cach xep                              Va 1%                Va 5%               Va 10%               Va 25%  Va bang quy tac CSA
+  CVSS                           6.5 ( 9.9%)        12.1 (18.3%)        19.0 (28.8%)        39.1 (59.2%)        39.0 (59.1%)
+  EPSS                          14.0 (21.2%)        26.0 (39.4%)        36.0 (54.5%)        42.0 (63.6%)        42.0 (63.6%)
+  S0 goc                        13.0 (19.7%)        30.0 (45.5%)        35.0 (53.0%)        43.0 (65.2%)        43.0 (65.2%)
+  S1 + PoC                      13.0 (19.7%)        30.0 (45.5%)        35.0 (53.0%)        43.0 (65.2%)        43.0 (65.2%)
+  S2 + san pham                 13.0 (19.7%)        26.6 (40.4%)        37.7 (57.1%)        49.4 (74.8%)        49.4 (74.8%)
+  S3 + PoC + san pham           13.0 (19.7%)        26.6 (40.2%)        37.7 (57.1%)        49.4 (74.8%)        49.4 (74.8%)
+
+Gop 2024 va 2025: 116 lo hong bi khai thac
+  Cach xep                              Va 1%                Va 5%               Va 10%               Va 25%  Va bang quy tac CSA
+  CVSS                           7.4 ( 6.4%)        21.8 (18.8%)        39.7 (34.2%)        66.1 (57.0%)        66.0 (56.9%)
+  EPSS                          21.0 (18.1%)        35.6 (30.7%)        47.0 (40.5%)        56.7 (48.9%)        56.8 (49.0%)
+  S0 goc                        20.0 (17.2%)        40.0 (34.5%)        48.7 (42.0%)        72.0 (62.1%)        72.0 (62.1%)
+  S1 + PoC                      20.0 (17.2%)        40.0 (34.5%)        48.7 (42.0%)        72.0 (62.1%)        72.0 (62.1%)
+  S2 + san pham                 21.9 (18.9%)        43.6 (37.6%)        59.1 (51.0%)        87.4 (75.3%)        87.5 (75.4%)
+  S3 + PoC + san pham           21.9 (18.9%)        43.6 (37.6%)        59.1 (51.0%)        87.4 (75.3%)        87.5 (75.4%)
+
+==============================================================================
+CHENH LECH SO VOI S0, GOP 2024 VA 2025, KHOANG TIN CAY 95% BOOTSTRAP
+==============================================================================
+  S1 + PoC              Va 1%                    +0.0 ca   [  +0.0,   +0.0]   chua ro
+  S1 + PoC              Va 5%                    +0.0 ca   [  -0.5,   +0.0]   chua ro
+  S1 + PoC              Va 10%                   +0.0 ca   [  +0.0,   +0.0]   chua ro
+  S1 + PoC              Va 25%                   +0.0 ca   [  +0.0,   +0.0]   chua ro
+  S1 + PoC              Va bang quy tac CSA      +0.0 ca   [  +0.0,   +0.0]   chua ro
+  S2 + san pham         Va 1%                    +1.9 ca   [  -1.1,   +5.2]   chua ro
+  S2 + san pham         Va 5%                    +3.6 ca   [  -5.7,  +12.9]   chua ro
+  S2 + san pham         Va 10%                  +10.4 ca   [  -0.2,  +20.0]   chua ro
+  S2 + san pham         Va 25%                  +15.4 ca   [  +3.7,  +27.4]   CO Y NGHIA
+  S2 + san pham         Va bang quy tac CSA     +15.5 ca   [  +4.0,  +27.9]   CO Y NGHIA
+  S3 + PoC + san pham   Va 1%                    +1.9 ca   [  -1.4,   +5.2]   chua ro
+  S3 + PoC + san pham   Va 5%                    +3.6 ca   [  -5.4,  +13.1]   chua ro
+  S3 + PoC + san pham   Va 10%                  +10.4 ca   [  -0.8,  +21.2]   chua ro
+  S3 + PoC + san pham   Va 25%                  +15.4 ca   [  +3.9,  +26.8]   CO Y NGHIA
+  S3 + PoC + san pham   Va bang quy tac CSA     +15.5 ca   [  +3.9,  +27.7]   CO Y NGHIA
+
+==============================================================================
+NHOM LO HONG BI KHAI THAC: TIN HIEU CO SAN TAI NGAY D
+==============================================================================
+  116 lo hong bi khai thac trong 2024-2025 (sau ngay D)
+  co PoC truoc ngay D        : 3 (2.6%)   ca tap: 0.10%
+  NCC da tung vao KEV        : 88 (75.9%)   ca tap: 34.4%
+  NCC co tu 20 muc KEV       : 45 (38.8%)   ca tap: 15.9%
+  trung vi EPSS tai D        : 0.0005   ca tap: 0.0004
