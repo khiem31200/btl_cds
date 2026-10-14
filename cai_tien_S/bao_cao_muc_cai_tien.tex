@@ -1,0 +1,114 @@
+% =====================================================================
+% Muc bo sung cho ReportLatexType1/bao_cao.tex (va ban IEEE).
+% Vi tri de xuat: cuoi \section{Ket qua thuc nghiem}, ngay truoc
+% \section{Danh gia tinh kha thi cua de xuat}. Doan cuoi (\paragraph{Thoi diem cua du lieu})
+% nen chen vao \subsection{Moi de doa doi voi tinh hop le}.
+% Ma va ket qua: thu muc cai_tien_S/ (cai_tien_S.py, kiem_tra_ro_ri.py, kiem_tra_cpe.py,
+% msrc_kiem_chung.py, cvss_tai_ngay_D.py), chay ngay 14/10/2026.
+% =====================================================================
+
+\subsection{Các cải tiến đã thử nhưng không hiệu quả}\label{sec:khonghieuqua}
+
+Giới hạn lớn nhất của $S$ là gần như không cảnh báo trước được lỗ hổng mới công bố
+(Bảng~\ref{tab:tuoi}). Nhóm thử ba cách bổ sung tín hiệu có sẵn sớm hơn EPSS. Cả ba dùng đúng
+thiết kế của thực nghiệm 4: mỗi tháng công bố là một đợt, ngày quyết định $D$ là cuối tháng, nhãn
+là vào KEV trong 180 ngày sau $D$, kiểm thử 2024 và 2025 (84.821 lỗ hổng, 116 bị khai thác). Vì
+$D$ là cuối tháng công bố, mọi lỗ hổng trong tập mới công bố tối đa 31 ngày. Với công thức gốc,
+thiết kế này cho lại đúng số của Bảng~\ref{tab:a1}. Tham số của các biến thể chỉ học trên những
+đợt có cửa sổ nhãn kết thúc trước ngày 01/01 của năm kiểm thử, và mọi tín hiệu chỉ tính nếu có
+trước hoặc đúng ngày $D$.
+
+Các biến thể giữ nguyên dạng của công thức, chỉ nâng sàn cho EPSS ở nhánh chưa có trong KEV:
+\begin{equation}
+S' = \text{CVSS} \times \max\bigl(\text{EPSS},\ p\bigr)^{0{,}3},
+\end{equation}
+trong đó $p$ là tỷ lệ vào KEV học được của nhóm lỗ hổng có cùng tín hiệu. Lỗ hổng có EPSS cao
+giữ nguyên điểm; chỉ lỗ hổng có EPSS gần 0 nhưng đã có tín hiệu khác được nâng lên.
+
+\begin{table}
+\centering
+\caption{Số lỗ hổng bị khai thác bắt được khi vá cùng số lượng, gộp 2024 và 2025 (116 lỗ hổng
+bị khai thác). Chênh lệch so với công thức gốc kèm khoảng tin cậy 95\% bootstrap 1.000 lần.}
+\label{tab:khonghieuqua}
+\begin{tabular}{lccccc}
+\toprule
+Cách xếp & 1\% & 5\% & 10\% & 25\% & Bằng CSA \\
+\midrule
+$S$ gốc & 20,0 & 40,0 & 48,7 & 72,0 & 72,0 \\
+$S$ + PoC (Exploit-DB) & 20,0 & 40,0 & 48,7 & 72,0 & 72,0 \\
+$S$ + nhà cung cấp theo CPE & 21,9 & 43,6 & 59,1 & 87,4 & 87,5 \\
+$S$ + nhà cung cấp theo CNA & 21,4 & 40,4 & 49,1 & 75,8 & 77,0 \\
+$S$ + cờ Exploited của Microsoft & 22,0 & 42,0 & 50,6 & 73,0 & 73,0 \\
+\midrule
+\multicolumn{6}{l}{Chênh lệch so với $S$ gốc} \\
+\quad Nhà cung cấp theo CPE & $+1{,}9$ & $+3{,}6$ & $+10{,}4$ & $+15{,}4^{*}$ & $+15{,}5^{*}$ \\
+\quad Nhà cung cấp theo CNA & $+1{,}4$ & $+0{,}4$ & $+0{,}4$ & $+3{,}8$ & $+5{,}0$ \\
+\quad Cờ Exploited của Microsoft & $+2{,}0$ & $+2{,}0$ & $+1{,}9$ & $+1{,}0$ & $+1{,}0$ \\
+\bottomrule
+\multicolumn{6}{l}{\footnotesize $^{*}$ khoảng tin cậy không chứa 0; mọi chênh lệch khác đều chứa 0.}
+\end{tabular}
+\end{table}
+
+\paragraph{PoC công khai.} Thực nghiệm 5 cho thấy điều kiện có PoC giúp quy tắc CSA ở tập lỗ hổng
+tồn đọng. Với lỗ hổng mới thì không: tại ngày $D$, chỉ 3 trong 116 lỗ hổng bị khai thác (2,6\%)
+đã có PoC trên Exploit-DB. Tỷ lệ vào KEV của nhóm có PoC trên dữ liệu huấn luyện bằng 0 (kiểm thử
+2024) và 0,71\% (kiểm thử 2025), quá thấp để thay đổi thứ hạng ở mọi khối lượng vá được xét.
+Phần lớn PoC trên Exploit-DB chưa xuất hiện vào cuối tháng công bố: chỉ 0,10\% lỗ hổng trong tập
+đã có PoC tại ngày $D$.
+
+\paragraph{Lịch sử của nhà cung cấp.} Lỗ hổng mới chưa có lịch sử, nhưng nhà cung cấp của nó thì
+có. Biến thể chia lỗ hổng theo số mục KEV của nhà cung cấp tính đến ngày $D$ (0, 1--4, 5--19,
+20--99, từ 100). Khi lấy nhà cung cấp từ CPE trong cấu hình của NVD, biến thể bắt thêm 15,5 ca ở
+khối lượng CSA, khoảng tin cậy $[+4{,}0;\ +27{,}9]$. Nhưng phần lớn mức tăng này là rò rỉ: CPE do
+NVD gán khi phân tích, thường sau ngày công bố, và 100\% lỗ hổng bị khai thác có CPE trong khi
+nhóm còn lại chỉ 81,1\% (2024) và 66,4\% (2025). Lỗ hổng thiếu CPE tự động rơi vào bậc thấp nhất,
+và đó gần như toàn là lỗ hổng không bị khai thác. Lấy nhà cung cấp từ CNA (\texttt{sourceIdentifier},
+có ngay khi công bố), mức tăng chỉ còn $+5{,}0$ ca, khoảng tin cậy $[-3{,}3;\ +13{,}8]$. Một phần vì
+CNA lớn nhất là \texttt{cve@mitre.org}, gộp nhiều nhà cung cấp làm một. Khi chỉ so trên lỗ hổng
+đã có CPE (bỏ lợi thế do thiếu CPE), mức tăng là $+13{,}2$ ca $[+1{,}6;\ +25{,}5]$ ở khối lượng
+CSA nhưng chỉ $+0{,}9$ ca $[-1{,}9;\ +3{,}2]$ khi vá 1\%. Vậy lịch sử nhà cung cấp có tín hiệu thật
+khi vá nhiều, nhưng không giúp nhóm vá khẩn cấp, đúng nơi cần cảnh báo sớm.
+
+\paragraph{Nguồn cảnh báo sớm hơn CISA KEV.} Microsoft đánh dấu \texttt{Exploited:Yes} trong
+tài liệu CVRF của MSRC, có ghi ngày trong lịch sử sửa đổi. Trong 108 lỗ hổng có cả hai nguồn,
+Microsoft báo cùng ngày với CISA ở 85 trường hợp (79\%), báo trước ở 20 (10 trường hợp chỉ trước
+1 ngày) và báo sau ở 3; trung vị độ trễ bằng 0 ngày. Mở rộng thành phần KEV thành
+``CISA KEV hoặc Microsoft đã báo bị khai thác'' chỉ bắt thêm 1--2 ca, không có ý nghĩa thống kê.
+Với nhà cung cấp lớn nhất, CISA KEV đã gần như theo kịp nguồn gốc; lợi ích của nguồn cảnh báo
+sớm, nếu có, nằm ở các nhà cung cấp mà CISA cập nhật chậm.
+
+\paragraph{Nhận xét.} Không cách nào bù được giới hạn với lỗ hổng mới công bố. Tín hiệu có ích
+nhất (lịch sử nhà cung cấp) chỉ cải thiện thứ tự khi vá nhiều, và một tổ chức có thể dùng nó trong
+chu kỳ vá thông thường nhờ danh mục tài sản của chính mình. Với nhóm vá khẩn cấp, kết luận ở
+Mục~\ref{sec:khathi} giữ nguyên: phải dựa vào quy tắc KEV, biện pháp giảm thiểu tạm thời cho hệ
+thống mở ra Internet và tốc độ phản ứng, không dựa vào dự báo.
+
+% ---------------------------------------------------------------------
+% Chen vao \subsection{Moi de doa doi voi tinh hop le}
+% ---------------------------------------------------------------------
+\paragraph{Thời điểm của dữ liệu.} Các thực nghiệm lấy điểm CVSS do NVD chấm khi có, nếu không
+thì lấy điểm khác (của CNA hoặc CISA-ADP), và bỏ lỗ hổng không có điểm. Điểm NVD và điểm của
+CISA-ADP thường được bổ sung sau ngày công bố, nên chưa chắc có tại ngày quyết định. NVD chấm cao
+hơn CNA ở 49,5\% số lỗ hổng có cả hai điểm và thấp hơn ở 27,8\%. Năm 2025, 100\% lỗ hổng KEV có
+điểm, nhóm còn lại chỉ 94,2\%. Bảng~\ref{tab:cvssngayD} chạy lại thực nghiệm 4 với bốn cách chọn
+điểm. Khi chỉ dùng điểm CNA (có ngay khi công bố), lợi thế của $S$ so với CVSS khi vá 5\% giảm từ
+$+18{,}2$ ca $[+7{,}5;\ +28{,}8]$ xuống $+5{,}3$ ca $[-6{,}2;\ +16{,}0]$; còn quy tắc CSA chỉ chọn
+11,7\% lỗ hổng và bỏ sót 57,8\% lỗ hổng bị khai thác. Như vậy kết luận ``quy tắc CSA bỏ sót nhiều''
+còn mạnh hơn khi dùng điểm có tại thời điểm quyết định, nhưng một phần lợi thế của $S$ so với CVSS
+có thể đến từ điểm NVD chấm muộn.
+
+\begin{table}
+\centering
+\caption{Thực nghiệm 4 với bốn cách chọn điểm CVSS, gộp 2024 và 2025. Cột cuối là số ca $S$ bắt
+được nhiều hơn CVSS khi vá 5\%, kèm khoảng tin cậy 95\%.}\label{tab:cvssngayD}
+\begin{tabular}{lrrrc}
+\toprule
+Cách chọn điểm & Lỗ hổng & CSA phải vá & CSA bỏ sót & $S$ hơn CVSS, vá 5\% \\
+\midrule
+NVD trước (như các thực nghiệm) & 84.821 & 25,1\% & 43,1\% & $+18{,}2$ $[+7{,}5;\ +28{,}8]$ \\
+Nguồn sớm trước (CNA, ADP, NVD) & 84.821 & 20,2\% & 37,9\% & $+12{,}4$ $[+1{,}2;\ +24{,}2]$ \\
+Chỉ CNA, giữ lỗ hổng không có điểm & 87.910 & 11,7\% & 57,8\% & $+5{,}3$ $[-6{,}2;\ +16{,}0]$ \\
+Chỉ CNA, bỏ lỗ hổng không có điểm & 56.985 & 18,0\% & 33,8\% & $+1{,}1$ $[-8{,}8;\ +10{,}9]$ \\
+\bottomrule
+\end{tabular}
+\end{table}
