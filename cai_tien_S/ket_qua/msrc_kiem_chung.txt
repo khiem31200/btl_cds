@@ -1,0 +1,54 @@
+==============================================================================
+CO EXPLOITED CUA MICROSOFT (tai lieu CVRF 01/2022 den 10/2026)
+==============================================================================
+  114 lo hong duoc Microsoft danh dau Exploited:Yes
+
+==============================================================================
+M1. MICROSOFT BAO TRUOC CISA KEV BAO NHIEU NGAY
+==============================================================================
+  Co ca hai nguon: 108   Chi Microsoft (khong co trong CISA KEV): 6
+  Muc KEV cua Microsoft them tu 06/2022: 166, trong do co co MSRC: 101
+
+  Cach tinh ngay lac quan: so ngay CISA KEV - ngay Microsoft bao
+    trung vi +0 ngay; Microsoft bao truoc (>0): 20, cung ngay: 85, bao sau (<0): 3
+    truoc 1 ngay       : 10
+    truoc 2-7 ngay     : 6
+    truoc 8-30 ngay    : 2
+    truoc tren 30 ngay : 2
+
+  Cach tinh ngay than trong: so ngay CISA KEV - ngay Microsoft bao
+    trung vi +0 ngay; Microsoft bao truoc (>0): 9, cung ngay: 55, bao sau (<0): 44
+    truoc 1 ngay       : 3
+    truoc 2-7 ngay     : 3
+    truoc 8-30 ngay    : 1
+    truoc tren 30 ngay : 2
+
+  Rieng co bat tu 2023 (lac quan): 91 lo hong, trung vi +0 ngay, cung ngay 75, truoc 14, sau 2
+
+==============================================================================
+M2. KEV* = CISA KEV HOAC MICROSOFT, TREN TAP LO HONG MOI CONG BO (2024-2025)
+==============================================================================
+  Microsoft da bao truoc ngay D (lac quan): 4 lo hong, 2 vao CISA KEV trong 180 ngay sau
+  Microsoft da bao truoc ngay D (than trong): 4 lo hong, 2 vao CISA KEV trong 180 ngay sau
+  Tong so lo hong bi khai thac (nhan): 116
+
+  Gop 2024 va 2025, 116 lo hong bi khai thac
+  Cach xep                     Va 1%         Va 5%        Va 10%        Va 25%   Va bang CSA
+  S0                      20.0 ( 17%)    40.0 ( 34%)    48.7 ( 42%)    72.0 ( 62%)    72.0 ( 62%)
+  S_MSRC lac quan         22.0 ( 19%)    42.0 ( 36%)    50.6 ( 44%)    73.0 ( 63%)    73.0 ( 63%)
+  S_MSRC than trong       22.0 ( 19%)    42.0 ( 36%)    50.6 ( 44%)    73.0 ( 63%)    73.0 ( 63%)
+
+  S_MSRC than trong so voi S0, khoang tin cay 95% bootstrap:
+    Va 1%           +2.0 ca  [  +0.0,   +5.0]  chua ro
+    Va 5%           +2.0 ca  [  +0.0,   +5.0]  chua ro
+    Va 10%          +1.9 ca  [  -0.0,   +5.0]  chua ro
+    Va 25%          +1.0 ca  [  +0.0,   +3.0]  chua ro
+    Va bang CSA     +1.0 ca  [  +0.0,   +3.0]  chua ro
+
+==============================================================================
+M3. QUY TAC 'BI KHAI THAC THI VA KHAN CAP': KICH HOAT SOM HON BAO NHIEU NGAY
+==============================================================================
+  Muc KEV cua Microsoft them tu 01/2023: 141 (dung ngay than trong)
+  Kich hoat som hon nho Microsoft: 4 lo hong (2.8%), tong 99 ngay, trung vi trong nhom duoc loi 4 ngay
+  Phan chiem trong toan bo KEV them tu 01/2023: 4 / 873
+  Microsoft bao bi khai thac tu 2023 nhung CISA chua them: 6 (vi du CVE-2023-24932, ADV230001, ADV230003, CVE-2024-26234, CVE-2024-43491)
