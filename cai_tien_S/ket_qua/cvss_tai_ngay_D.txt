@@ -1,0 +1,57 @@
+==============================================================================
+NGUON DIEM CVSS 3.x, LO HONG CONG BO 2023-2025
+==============================================================================
+  2023 KEV           166  co CNA  53.6%  co ADP  41.6%  co NVD  81.3%  khong diem nao   0.0%
+  2023 khong KEV  28,650  co CNA  56.0%  co ADP  20.7%  co NVD  92.1%  khong diem nao   0.0%
+  2024 KEV           160  co CNA  63.1%  co ADP  25.6%  co NVD  74.4%  khong diem nao   0.0%
+  2024 khong KEV  39,793  co CNA  63.8%  co ADP  25.9%  co NVD  57.9%  khong diem nao   0.8%
+  2025 KEV           197  co CNA  67.5%  co ADP  18.8%  co NVD  49.2%  khong diem nao   0.0%
+  2025 khong KEV  47,955  co CNA  65.7%  co ADP  18.8%  co NVD  34.5%  khong diem nao   5.8%
+
+  Lo hong co ca diem NVD va CNA: 38,497; khac nhau 77.3%, NVD cao hon 49.5%, thap hon 27.8%
+  Rieng lo hong KEV: 175; khac nhau 46.9%, NVD cao hon 25.1%, thap hon 21.7%
+  Vuot nguong 8,0 theo NVD nhung khong theo CNA: 8,226; nguoc lai: 2,323
+
+==============================================================================
+KET QUA GOP 2024 VA 2025 (so lo hong bi khai thac bat duoc / tong)
+==============================================================================
+
+V0 nhu nhom (NVD truoc): 84,821 lo hong, 116 bi khai thac
+  Quy tac CSA: phai va 21,292 (25.1%), bat 66/116 (56.9%), bo sot 43.1%, hieu suat gap 2.27 lan ngau nhien
+  Cach xep           Va 1%           Va 5%          Va 10%          Va 25%     Va bang CSA
+  CVSS          7.4 (  6%)     21.8 ( 19%)     39.7 ( 34%)     66.1 ( 57%)     66.0 ( 57%)
+  S0           20.0 ( 17%)     40.0 ( 34%)     48.7 ( 42%)     72.0 ( 62%)     72.0 ( 62%)
+  EPSS         21.0 ( 18%)     35.6 ( 31%)     47.0 ( 41%)     56.7 ( 49%)     56.8 ( 49%)
+
+V1 nguon som truoc: 84,821 lo hong, 116 bi khai thac
+  Quy tac CSA: phai va 17,163 (20.2%), bat 72/116 (62.1%), bo sot 37.9%, hieu suat gap 3.07 lan ngau nhien
+  Cach xep           Va 1%           Va 5%          Va 10%          Va 25%     Va bang CSA
+  CVSS         13.4 ( 12%)     29.6 ( 26%)     54.2 ( 47%)     79.1 ( 68%)     72.0 ( 62%)
+  S0           21.0 ( 18%)     42.0 ( 36%)     53.9 ( 46%)     78.0 ( 67%)     71.0 ( 61%)
+  EPSS         21.0 ( 18%)     35.6 ( 31%)     47.0 ( 41%)     56.7 ( 49%)     54.4 ( 47%)
+
+V2 chi CNA, giu het: 87,910 lo hong, 116 bi khai thac
+  Quy tac CSA: phai va 10,273 (11.7%), bat 49/116 (42.2%), bo sot 57.8%, hieu suat gap 3.61 lan ngau nhien
+  Cach xep           Va 1%           Va 5%          Va 10%          Va 25%     Va bang CSA
+  CVSS         12.4 ( 11%)     37.7 ( 32%)     43.5 ( 37%)     63.0 ( 54%)     49.0 ( 42%)
+  S0           22.0 ( 19%)     43.0 ( 37%)     52.0 ( 45%)     72.3 ( 62%)     56.0 ( 48%)
+  EPSS         21.0 ( 18%)     33.6 ( 29%)     46.0 ( 40%)     56.8 ( 49%)     48.0 ( 41%)
+
+V3 chi CNA, bo thieu: 56,985 lo hong, 74 bi khai thac
+  Quy tac CSA: phai va 10,273 (18.0%), bat 49/74 (66.2%), bo sot 33.8%, hieu suat gap 3.67 lan ngau nhien
+  Cach xep           Va 1%           Va 5%          Va 10%          Va 25%     Va bang CSA
+  CVSS         11.1 ( 15%)     27.9 ( 38%)     39.0 ( 53%)     55.7 ( 75%)     49.0 ( 66%)
+  S0           15.0 ( 20%)     29.0 ( 39%)     36.0 ( 49%)     53.0 ( 72%)     48.0 ( 65%)
+  EPSS         12.0 ( 16%)     24.2 ( 33%)     33.0 ( 45%)     37.7 ( 51%)     36.0 ( 49%)
+
+==============================================================================
+S0 HON CVSS (so ca) THEO TUNG CACH CHON DIEM, khoang tin cay 95% bootstrap
+==============================================================================
+  V0 nhu nhom (NVD truoc)   Va 5%          +18.2 ca  [  +7.5,  +28.8]  CO Y NGHIA
+  V0 nhu nhom (NVD truoc)   Va bang CSA     +6.0 ca  [  -3.0,  +14.0]  chua ro
+  V1 nguon som truoc        Va 5%          +12.4 ca  [  +1.2,  +24.2]  CO Y NGHIA
+  V1 nguon som truoc        Va bang CSA     -1.0 ca  [  -9.0,   +7.0]  chua ro
+  V2 chi CNA, giu het       Va 5%           +5.3 ca  [  -6.2,  +16.0]  chua ro
+  V2 chi CNA, giu het       Va bang CSA     +7.0 ca  [  -1.0,  +16.0]  chua ro
+  V3 chi CNA, bo thieu      Va 5%           +1.1 ca  [  -8.8,  +10.9]  chua ro
+  V3 chi CNA, bo thieu      Va bang CSA     -1.0 ca  [  -7.0,   +5.0]  chua ro

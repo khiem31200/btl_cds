@@ -8,6 +8,8 @@ Thiết kế giống `Thu_Kha_Thi/src/05_kiem_chung.py` của repo nhóm (bản 
 | `kiem_tra_ro_ri.py` | Kiểm tra rò rỉ của CPE; chạy lại S2 với nhà cung cấp lấy từ CNA (`sourceIdentifier`) |
 | `kiem_tra_cpe.py` | So S0 và S2 chỉ trên lỗ hổng đã có CPE |
 | `msrc_kiem_chung.py` | Dùng cờ "Exploited" của Microsoft (API CVRF của MSRC) làm nguồn cảnh báo sớm hơn CISA KEV |
+| `cvss_tai_ngay_D.py` | So 4 cách chọn điểm CVSS (NVD trước như nhóm, nguồn sớm trước, chỉ CNA giữ hết, chỉ CNA bỏ thiếu) |
+| `chay_tat_ca.sh` | Chạy toàn bộ theo thứ tự |
 | `ket_qua/` | Kết quả chạy |
 
 Chạy: `python3 cai_tien_S.py`, sau đó `python3 kiem_tra_ro_ri.py` và `python3 kiem_tra_cpe.py`, `python3 msrc_kiem_chung.py`. Cần truy cập `nvd.nist.gov`, `epss.empiricalsecurity.com`, `raw.githubusercontent.com`, `gitlab.com`, `api.msrc.microsoft.com`.
